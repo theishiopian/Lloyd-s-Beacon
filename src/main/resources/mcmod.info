@@ -1,6 +1,6 @@
 [
 {
-  "modid": "examplemod",
+  "modid": "lloydbeacon",
   "name": "Lloyd's Beacon",
   "description": "SImple teleport beacon based on pixel dungeon by watabou",
   "version": "${version}",
