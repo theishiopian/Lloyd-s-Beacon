@@ -9,7 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid = Core.MODID, version = Core.VERSION)
 public class Core
 {
-    public static final String MODID = "lloydbeacon";
+    public static final String MODID = "lloydsbeacon";
     public static final String VERSION = "1.0";
     
     @EventHandler

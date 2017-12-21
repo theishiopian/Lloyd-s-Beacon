@@ -13,7 +13,7 @@ public final class ModSounds
 	
 	private static SoundEvent createEvent(String sound) 
 	{
-		ResourceLocation name = new ResourceLocation("beacon", sound);
+		ResourceLocation name = new ResourceLocation("lloydsbeacon", sound);
 		return new SoundEvent(name).setRegistryName(name);
 	}
 	
