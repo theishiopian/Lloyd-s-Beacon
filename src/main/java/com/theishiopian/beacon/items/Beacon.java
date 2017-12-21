@@ -1,7 +1,6 @@
 package com.theishiopian.beacon.items;
 
 import com.theishiopian.beacon.ModSounds;
-
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -47,14 +46,10 @@ public class Beacon extends Item
 			//System.out.println("Right-Click");
 			if(savedloc!=null)
 			{
-				if(playerIn.attemptTeleport(savedloc.getX(), savedloc.getY(), savedloc.getZ()))
-				{
-					playerIn.playSound(ModSounds.dejavu, 1, 1);
-					playerIn.getCooldownTracker().setCooldown(this, 60);
-					savedloc=null;
-				}
-				
-				
+				playerIn.setPositionAndUpdate(savedloc.getX(), savedloc.getY(), savedloc.getZ());
+				playerIn.playSound(ModSounds.dejavu, 1, 1);
+				playerIn.getCooldownTracker().setCooldown(this, 60);
+				savedloc=null;
 			}
 		}
 		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, playerIn.getHeldItem(handIn));
